@@ -1,0 +1,29 @@
+name: gradient_like_css
+description: A new Flutter plugin.
+version: 0.0.1
+author:
+homepage: https://github.com/azukisiromochi/gradient_like_css
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # https://pub.dev/packages/pedantic_mono
+  pedantic_mono: any
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.azukisiromochi.gradient_like_css
+        pluginClass: GradientLikeCssPlugin
+      ios:
+        pluginClass: GradientLikeCssPlugin
