@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # https://github.com/google/tuple.dart
+  tuple: ^1.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
