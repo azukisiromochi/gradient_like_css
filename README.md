@@ -1,6 +1,6 @@
 # gradient_like_css
 
-A new Flutter plugin.
+The `gradient_like_css` package for Flutter allows you to experience CSS-like gradients in your Flutter app.
 
 ## Getting Started
 
