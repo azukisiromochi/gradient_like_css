@@ -19,7 +19,7 @@ class CssLike {
 
   static Alignment _getEndAlignment(Object angleOrEndAlignment) {
     if (angleOrEndAlignment == null) {
-      return _degreesToAlignment(90);
+      return Alignment.bottomCenter;
     } else if (angleOrEndAlignment is num) {
       final angle = angleOrEndAlignment.toDouble();
       return _degreesToAlignment(angle - 90);
