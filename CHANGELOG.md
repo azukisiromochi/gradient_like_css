@@ -1,6 +1,7 @@
 ## [0.0.5] - 2021-01-22
 
 - 📚 Add changelog
+- 📚 Update README with import instructions and example
 
 ## [0.0.4] - 2021-01-22
 
