@@ -1,3 +1,7 @@
+## [0.1.0] - 2021-01-22
+
+- 📚 Preparing for release
+
 ## [0.0.5] - 2021-01-22
 
 - 📚 Add changelog
@@ -10,7 +14,7 @@
 
 ## [0.0.3] - 2021-01-22
 
-- ♻️ Change property name, etc
+- ♻ Change property name, etc
 
 ## [0.0.2] - 2021-01-21
 

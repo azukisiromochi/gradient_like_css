@@ -2,6 +2,8 @@
 
 The `gradient_like_css` package for Flutter allows you to experience CSS-like gradients in your Flutter app.
 
+<br>
+
 ## Installing
 
 ### 1. Depend on it
@@ -31,13 +33,31 @@ Now in your `Dart` code, you can use:
 import 'package:gradient_like_css/gradient_like_css.dart';
 ```
 
+<br>
+
 ## Usage
+
+To import `CssLike`:
+
+```dart
+import 'package:gradient_like_css/gradient_like_css.dart';
+```
+
+To use `CssLike` with the `BoxDecoration`:
+
+```dart
+BoxDecoration(
+  gradient: CssLike.linearGradient(-225, ['#69EACB', '#EACCF8 48%', "#6654F1"]),
+);
+```
+
+<br> 
 
 ## Example
 
 ### `CssLike.linearGradient()`
 
-- **Gradient at the default angle**
+#### ⚪ Gradient at the default angle
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example1.png" align="right" height="300px">
 
@@ -59,9 +79,11 @@ Container(
 );
 ```
 
-***\*Note:\**** If the first argument is `null`, a 180 degree angular gradient is created.
+>  _\*Note: If the first argument is `null`, a 180 degree angular gradient is created._
 
-- **Gradient at a 45-degree angle**
+<br>
+
+#### ⚪ Gradient at a 45-degree angle
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example2.png" align="right" height="300px">
 
@@ -83,9 +105,11 @@ Container(
 );
 ```
 
-***\*Note:\**** The `color` argument  can use [X11/CSS3 color](https://en.wikipedia.org/wiki/Web_colors#X11_color_names) names.
+>  _\*Note: The `color` argument  can use [X11/CSS3 color](https://en.wikipedia.org/wiki/Web_colors#X11_color_names) names._
 
-- **Gradient that starts at 60% of the gradient line**
+<br>
+
+#### ⚪ Gradient that starts at 60% of the gradient line
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example3.png" align="right" height="300px">
 
@@ -107,9 +131,11 @@ Container(
 );
 ```
 
-***\*Note:\**** You can add a color-stop points using the `stop` argument. It can be used with % such as `'orange 60%'`.
+>  _\*Note: You can add a color-stop points using the `stop` argument. It can be used with % such as `'orange 60%'`._
 
-- **Gradient with multi-position color stops**
+<br>
+
+#### ⚪ Gradient with multi-position color stops
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example4.png" align="right" height="300px">
 
@@ -133,4 +159,38 @@ Container(
 );
 ```
 
-***\*Note:\**** The first argument can be `Alignment` as well as angle.
+>  _\*Note: The first argument can be `Alignment` as well as angle._
+
+<br>
+
+### `WebColors` / `X11Colors`
+
+To use `X11Colors`:
+
+```dart
+Container(
+    color: X11Colors.MediumSpringGreen.color,
+);
+```
+
+To use `WebColors`  by [X11/CSS3 color](https://en.wikipedia.org/wiki/Web_colors#X11_color_names) names:
+
+```dart
+Container(
+    // Can be used in lowercase too
+    color: WebColors.of('MediumSpringGreen').color,
+);
+```
+
+<br>
+
+## Features
+
+- `CssLike.radialGradient()`
+- `CssLike.conicGradient()` ( `SweepGradient`  )
+
+<br>
+
+## Bugs or Requests
+
+If you encounter any problems feel free to open an [issue](https://github.com/azukisiromochi/gradient_like_css/issues/new?template=bug_report.md). If you feel the library is missing a feature, please raise a [ticket](https://github.com/azukisiromochi/gradient_like_css/issues/new?template=feature_request.md) on GitHub and I'll look into it. Pull request are also welcome.
