@@ -2,6 +2,7 @@
 
 - 📚 Add changelog
 - 📚 Update README with import instructions and example
+- 📚 README image path fixes
 
 ## [0.0.4] - 2021-01-22
 
