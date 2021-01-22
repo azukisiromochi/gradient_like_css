@@ -5,9 +5,9 @@ import 'package:tuple/tuple.dart';
 
 class CssLike {
   static LinearGradient linearGradient(
-      Object angleOrEndAlignment, List<String> colorStops) {
+      Object angleOrEndAlignment, List<String> colorStopList) {
     final endAlignment = _getEndAlignment(angleOrEndAlignment);
-    final colorsAndStops = _getColorsAndStops(colorStops);
+    final colorsAndStops = _getColorsAndStops(colorStopList);
 
     return LinearGradient(
       begin: -endAlignment,
@@ -26,16 +26,18 @@ class CssLike {
     } else if (angleOrEndAlignment is Alignment) {
       return angleOrEndAlignment;
     } else {
-      //TODO: exception
+      throw const FormatException(
+          // ignore: lines_longer_than_80_chars
+          'The "angleOrEndAlignment" parameter is valid only for the "double" or "Alignment" type.');
     }
   }
 
   static Tuple2<List<Color>, List<double>> _getColorsAndStops(
-      List<String> colorStops) {
+      List<String> colorStopList) {
     final colors = <Color>[];
     final stops = <double>[];
 
-    for (final param in colorStops) {
+    for (final param in colorStopList) {
       String colorCode, percentage1, percentage2;
 
       final splitParam = param.split(' ');
@@ -49,7 +51,9 @@ class CssLike {
         percentage2 = splitParam[2];
       }
       if (splitParam.length == 0 || splitParam.length > 3) {
-        //TODO: exception
+        throw const FormatException(
+            // ignore: lines_longer_than_80_chars
+            'The "colorStopList" parameter can be set up to three, separated by spaces, such as "yellow 40% 60%".');
       }
 
       final color = _codeToColor(colorCode);
@@ -102,7 +106,7 @@ class CssLike {
       final stop = double.parse(percentageString.replaceAll('%', '')) / 100;
 //      assert(0.0 <= stop && stop <= 1.0);
       return stop;
-    } on Exception catch (e) {
+    } on Exception {
       throw const FormatException(
           'Bad stop format (Allow percentage strings like "12.34%").');
     }
