@@ -1,3 +1,7 @@
+## [0.5.1] - 2021-01-26
+
+- 🐛 Fixed color stop point bug
+
 ## [0.5.0] - 2021-01-26
 
 - 🚨  Unit test finished

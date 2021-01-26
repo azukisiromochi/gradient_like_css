@@ -172,7 +172,7 @@ class CssLike {
     final y = _y(degrees);
 
     if ((0.0 < x && x < 1.0) || (0.0 < y && y < 1.0)) {
-      final magnification = (1 / x) > (1 / y) ? (1 / x) : (1 / y);
+      final magnification = (1 / x) < (1 / y) ? (1 / x) : (1 / y);
       return Alignment(x, y) * magnification;
     } else {
       return Alignment(x, y);
