@@ -1,3 +1,7 @@
+## [0.5.0] - 2021-01-26
+
+- 🚨  Unit test finished
+
 ## [0.1.0] - 2021-01-22
 
 - 📚 Preparing for release

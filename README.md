@@ -57,7 +57,7 @@ BoxDecoration(
 
 ### `CssLike.linearGradient()`
 
-#### ⚪ Gradient at the default angle
+#### 🎨 Gradient at the default angle
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example1.png" align="right" height="300px">
 
@@ -83,7 +83,7 @@ Container(
 
 <br>
 
-#### ⚪ Gradient at a 45-degree angle
+#### 🎨 Gradient at a 45-degree angle
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example2.png" align="right" height="300px">
 
@@ -109,7 +109,7 @@ Container(
 
 <br>
 
-#### ⚪ Gradient that starts at 60% of the gradient line
+#### 🎨 Gradient that starts at 60% of the gradient line
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example3.png" align="right" height="300px">
 
@@ -135,7 +135,7 @@ Container(
 
 <br>
 
-#### ⚪ Gradient with multi-position color stops
+#### 🎨 Gradient with multi-position color stops
 
 <img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example4.png" align="right" height="300px">
 
