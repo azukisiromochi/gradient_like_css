@@ -116,7 +116,7 @@ Container(
 with `CSS`:
 
 ```css
-background: linear-gradient(135deg, orange 60%, cyan);
+background: linear-gradient(135deg, orange, orange 60%, cyan);
 ```
 
 with `Flutter`:
