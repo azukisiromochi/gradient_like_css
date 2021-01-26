@@ -5,6 +5,8 @@
 .pub/
 
 build/
+ios/
+android/
 coverage/
 
 .idea/*
