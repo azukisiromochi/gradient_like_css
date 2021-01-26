@@ -59,7 +59,7 @@ BoxDecoration(
 
 #### ⚪ Gradient at the default angle
 
-<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example1.png" align="right" height="300px">
+<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example1.png" align="right" height="300px">
 
 with `CSS`:
 
@@ -85,7 +85,7 @@ Container(
 
 #### ⚪ Gradient at a 45-degree angle
 
-<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example2.png" align="right" height="300px">
+<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example2.png" align="right" height="300px">
 
 with `CSS`:
 
@@ -111,7 +111,7 @@ Container(
 
 #### ⚪ Gradient that starts at 60% of the gradient line
 
-<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example3.png" align="right" height="300px">
+<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example3.png" align="right" height="300px">
 
 with `CSS`:
 
@@ -137,7 +137,7 @@ Container(
 
 #### ⚪ Gradient with multi-position color stops
 
-<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike%23linearGradient__example4.png" align="right" height="300px">
+<img src="https://raw.githubusercontent.com/azukisiromochi/gradient_like_css/main/display/CssLike_linearGradient__example4.png" align="right" height="300px">
 
 with `CSS`:
 
