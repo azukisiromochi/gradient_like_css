@@ -22,7 +22,7 @@ class CssLike {
       return Alignment.bottomCenter;
     } else if (angleOrEndAlignment is num) {
       final angle = angleOrEndAlignment.toDouble();
-      return _degreesToAlignment(angle - 90);
+      return _degreesToAlignment(angle - 90.0);
     } else if (angleOrEndAlignment is Alignment) {
       return angleOrEndAlignment;
     } else {
@@ -36,6 +36,12 @@ class CssLike {
       List<String> colorStopList) {
     final colors = <Color>[];
     final stops = <double>[];
+
+    if ((colorStopList ?? const <String>[]).isEmpty) {
+      throw const FormatException(
+          // ignore: lines_longer_than_80_chars
+          'The "colorStopList" parameter can be set up to three, separated by spaces, such as "yellow 40% 60%".');
+    }
 
     for (final param in colorStopList) {
       String colorCode, percentage1, percentage2;
@@ -86,7 +92,8 @@ class CssLike {
         final separation = (nextStop - previousStop) / (range + 1);
 
         for (var i = 0; i < range; i++) {
-          stops[index + i] = previousStop + separation * (i + 1);
+          stops[index + i] = double.parse(
+              (previousStop + separation * (i + 1)).toStringAsPrecision(8));
         }
       }
     });
@@ -144,9 +151,10 @@ class CssLike {
   static Alignment _degreesToAlignment(double degrees) {
     final x = _x(degrees);
     final y = _y(degrees);
+
     if ((0.0 < x && x < 1.0) || (0.0 < y && y < 1.0)) {
       final magnification = (1 / x) > (1 / y) ? (1 / x) : (1 / y);
-      return Alignment(x * magnification, y * magnification);
+      return Alignment(x, y) * magnification;
     } else {
       return Alignment(x, y);
     }
@@ -154,11 +162,11 @@ class CssLike {
 
   static double _x(double degrees) {
     final radians = degrees / 180.0 * math.pi;
-    return math.cos(radians);
+    return double.parse(math.cos(radians).toStringAsPrecision(8));
   }
 
   static double _y(double degrees) {
     final radians = degrees / 180.0 * math.pi;
-    return math.sin(radians);
+    return double.parse(math.sin(radians).toStringAsPrecision(8));
   }
 }
