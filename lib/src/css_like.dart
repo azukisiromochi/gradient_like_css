@@ -4,6 +4,25 @@ import 'package:gradient_like_css/src/web_colors.dart';
 import 'package:tuple/tuple.dart';
 
 class CssLike {
+  /// Create linear gradients with CSS-like coding.
+  /// For example, the following code.
+  ///
+  /// ```dart
+  /// BoxDecoration(
+  ///   gradient: CssLike
+  ///     .linearGradient(-225, ['#69EACB', '#EACCF8 48%', "#6654F1"]),
+  /// );
+  ///```
+  ///
+  /// The [angleOrEndAlignment] argument is valid only for the [double] or
+  /// [Alignment] type.
+  ///
+  /// The [colorStopList] argument is a space-separated list of String
+  /// containing colors and stops.
+  /// The [colorStopList] argument must not be null. Colors allow web color
+  /// names or color codes that start with "#". Stops allow percentage strings
+  /// like "12.34%".
+  /// 
   static LinearGradient linearGradient(
       Object angleOrEndAlignment, List<String> colorStopList) {
     final endAlignment = _getEndAlignment(angleOrEndAlignment);
@@ -28,7 +47,7 @@ class CssLike {
     } else {
       throw const FormatException(
           // ignore: lines_longer_than_80_chars
-          'The "angleOrEndAlignment" parameter is valid only for the "double" or "Alignment" type.');
+          'The "angleOrEndAlignment" argument is valid only for the "double" or "Alignment" type.');
     }
   }
 
@@ -40,7 +59,7 @@ class CssLike {
     if ((colorStopList ?? const <String>[]).isEmpty) {
       throw const FormatException(
           // ignore: lines_longer_than_80_chars
-          'The "colorStopList" parameter can be set up to three, separated by spaces, such as "yellow 40% 60%".');
+          'The "colorStopList" argument can be set up to three, separated by spaces, such as "yellow 40% 60%".');
     }
 
     for (final param in colorStopList) {
@@ -59,7 +78,7 @@ class CssLike {
       if (splitParam.length == 0 || splitParam.length > 3) {
         throw const FormatException(
             // ignore: lines_longer_than_80_chars
-            'The "colorStopList" parameter can be set up to three, separated by spaces, such as "yellow 40% 60%".');
+            'The "colorStopList" argument can be set up to three, separated by spaces, such as "yellow 40% 60%".');
       }
 
       final color = _codeToColor(colorCode);
