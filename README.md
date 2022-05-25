@@ -12,7 +12,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  gradient_like_css: ^0.5.0
+  gradient_like_css: ^1.0.0
 ```
 
 ### 2. Install it
