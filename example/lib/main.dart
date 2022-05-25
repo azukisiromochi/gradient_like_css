@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gradient_like_css/gradient_like_css.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -28,7 +30,8 @@ class _MyAppState extends State<MyApp> {
             height: 300,
             width: 300,
             decoration: BoxDecoration(
-              gradient: CssLike.linearGradient(-225, ['#69EACB', '#EACCF8 48%', "#6654F1"]),
+              gradient:
+                  linearGradient(-225, ['#69EACB', '#EACCF8 48%', "#6654F1"]),
 //              gradient: CssLike.linearGradient(null, ['#e66465', '#9198e5']),
 //              gradient: CssLike.linearGradient(45, ['red', 'blue']),
 //              gradient: CssLike.linearGradient(135, ['orange', 'orange 60%', 'cyan']),

@@ -47,7 +47,7 @@ To use `CssLike` with the `BoxDecoration`:
 
 ```dart
 BoxDecoration(
-  gradient: CssLike.linearGradient(-225, ['#69EACB', '#EACCF8 48%', "#6654F1"]),
+  gradient: linearGradient(-225, ['#69EACB', '#EACCF8 48%', "#6654F1"]),
 );
 ```
 
@@ -74,7 +74,7 @@ Container(
   height: 300,
   width: 300,
   decoration: BoxDecoration(
-    gradient: CssLike.linearGradient(null, ['#e66465', '#9198e5']),
+    gradient: linearGradient(null, ['#e66465', '#9198e5']),
   ),
 );
 ```
@@ -100,7 +100,7 @@ Container(
   height: 300,
   width: 300,
   decoration: BoxDecoration(
-    gradient: CssLike.linearGradient(45, ['red', 'blue']),
+    gradient: linearGradient(45, ['red', 'blue']),
   ),
 );
 ```
@@ -126,7 +126,7 @@ Container(
   height: 300,
   width: 300,
   decoration: BoxDecoration(
-    gradient: CssLike.linearGradient(135, ['orange', 'orange 60%', 'cyan']),
+    gradient: linearGradient(135, ['orange', 'orange 60%', 'cyan']),
   ),
 );
 ```
@@ -153,7 +153,7 @@ Container(
   height: 300,
   width: 300,
   decoration: BoxDecoration(
-    gradient: CssLike.linearGradient(Alignment.centerRight, 
+    gradient: linearGradient(Alignment.centerRight, 
       ['red 20%', 'orange 20% 40%', 'yellow 40% 60%', 'green 60% 80%', 'blue 80%']),
   ),
 );
@@ -186,8 +186,8 @@ Container(
 
 ## Features
 
-- `CssLike.radialGradient()`
-- `CssLike.conicGradient()` ( `SweepGradient`  )
+- `radialGradient()`
+- `conicGradient()` ( `sweepGradient`  )
 
 <br>
 

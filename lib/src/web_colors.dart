@@ -1,18 +1,26 @@
 import 'dart:ui';
 
+///
+/// Web color names
+///
+/// via. [https://en.wikipedia.org/wiki/Web_colors]
+///
 extension WebColors on X11Colors {
   static X11Colors of(String name) {
-    if ((name ?? '').isEmpty) {
-      return null;
+    if (name.isEmpty) {
+      return X11Colors.White;
     }
     for (final webColor in X11Colors.values) {
       if (webColor.name == name.toLowerCase()) {
         return webColor;
       }
     }
-    return null;
+    return X11Colors.None;
   }
 
+  ///
+  /// Return the Web color name associated with the X11 color name.
+  ///
   String get name {
     switch (this) {
       // Pink colors
@@ -316,11 +324,16 @@ extension WebColors on X11Colors {
         return 'lightgray';
       case X11Colors.Gainsboro:
         return 'gainsboro';
-    }
 
-    return null;
+      // None
+      case X11Colors.None:
+        return 'none';
+    }
   }
 
+  ///
+  /// Return the [Color] associated with the X11 color name.
+  ///
   Color get color {
     switch (this) {
       // Pink colors
@@ -624,12 +637,19 @@ extension WebColors on X11Colors {
         return const Color(0xFFD3D3D3);
       case X11Colors.Gainsboro:
         return const Color(0xFFDCDCDC);
-    }
 
-    return null;
+      // None ( return White )
+      case X11Colors.None:
+        return const Color(0xFFFFFFFF);
+    }
   }
 }
 
+///
+/// X11 color names
+///
+/// via. [https://en.wikipedia.org/wiki/X11_color_names]
+///
 // ignore_for_file: constant_identifier_names
 enum X11Colors {
   // Pink colors
@@ -793,4 +813,7 @@ enum X11Colors {
   Silver,
   LightGray,
   Gainsboro,
+
+  // None
+  None,
 }
