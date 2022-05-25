@@ -1,4 +1,4 @@
-## [1.0.0] - 2022-05-25
+## [1.0.0-nullsafety.0] - 2022-05-25
 
 - ✨ Add null safety support
 
