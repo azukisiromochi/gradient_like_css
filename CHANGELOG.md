@@ -1,3 +1,7 @@
+## [1.0.1] - 2022-05-25
+
+- 📚 Update the README to change the version rule
+
 ## [1.0.0-nullsafety.0] - 2022-05-25
 
 - ✨ Add null safety support
