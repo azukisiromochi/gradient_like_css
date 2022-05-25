@@ -6,7 +6,8 @@ description: Demonstrates how to use the gradient_like_css plugin.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.16.0 <3.0.0"
+  flutter: ">=1.10.0"
 
 dependencies:
   flutter:

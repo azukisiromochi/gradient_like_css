@@ -1,3 +1,7 @@
+## [1.0.0] - 2022-05-25
+
+- ✨ Add null safety support
+
 ## [0.5.1] - 2021-01-26
 
 - 🐛 Fixed color stop point bug

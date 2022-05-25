@@ -42,7 +42,7 @@ Alignment _getEndAlignment(Object? angleOrEndAlignment) {
     return Alignment.bottomCenter;
   } else if (angleOrEndAlignment is num) {
     final angle = angleOrEndAlignment.toDouble();
-    return _degreesToAlignment(angle + 90.0);
+    return _degreesToAlignment(angle -90);
   } else if (angleOrEndAlignment is Alignment) {
     return angleOrEndAlignment;
   } else {
@@ -190,9 +190,11 @@ Alignment _degreesToAlignment(double degrees) {
 
   final x = _x(degrees);
   final y = _y(degrees);
+  final xAbs = x.abs();
+  final yAbs = y.abs();
 
-  if ((0.0 < x && x < 1.0) || (0.0 < y && y < 1.0)) {
-    final magnification = (1 / x) < (1 / y) ? (1 / x) : (1 / y);
+  if ((0.0 < xAbs && xAbs < 1.0) || (0.0 < yAbs && yAbs < 1.0)) {
+    final magnification = (1 / xAbs) < (1 / yAbs) ? (1 / xAbs) : (1 / yAbs);
     return Alignment(x, y) * magnification;
   } else {
     return Alignment(x, y);
@@ -201,21 +203,21 @@ Alignment _degreesToAlignment(double degrees) {
 
 Alignment? _getVerticalOrHorizontal(double degrees) {
   var modDeg = degrees % 360;
-  if (degrees < 0.0) {
+  if (degrees < 0.0 && modDeg != 0.0) {
     modDeg -= 360;
   }
 
   if (modDeg == 0.0 || modDeg == -0.0) {
-    return Alignment.centerLeft;
-  }
-  if (modDeg == 90.0 || modDeg == -270.0) {
-    return Alignment.topCenter;
-  }
-  if (modDeg == 180.0 || modDeg == -180.0) {
     return Alignment.centerRight;
   }
-  if (modDeg == 270.0 || modDeg == -90.0) {
+  if (modDeg == 90.0 || modDeg == -270.0) {
     return Alignment.bottomCenter;
+  }
+  if (modDeg == 180.0 || modDeg == -180.0) {
+    return Alignment.centerLeft;
+  }
+  if (modDeg == 270.0 || modDeg == -90.0) {
+    return Alignment.topCenter;
   }
   return null;
 }
