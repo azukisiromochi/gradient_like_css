@@ -22,6 +22,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.azukisiromochi.gradient_like_css'
     compileSdkVersion 28
 
     defaultConfig {
