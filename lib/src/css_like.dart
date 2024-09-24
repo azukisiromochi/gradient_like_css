@@ -42,7 +42,7 @@ Alignment _getEndAlignment(Object? angleOrEndAlignment) {
     return Alignment.bottomCenter;
   } else if (angleOrEndAlignment is num) {
     final angle = angleOrEndAlignment.toDouble();
-    return _degreesToAlignment(angle -90);
+    return _degreesToAlignment(angle - 90);
   } else if (angleOrEndAlignment is Alignment) {
     return angleOrEndAlignment;
   } else {

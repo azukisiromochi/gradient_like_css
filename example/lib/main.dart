@@ -6,13 +6,13 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
@@ -31,21 +31,22 @@ class _MyAppState extends State<MyApp> {
             width: 300,
             decoration: BoxDecoration(
               gradient: linearGradient(null, ['#e66465', '#9198e5']),
+
               /// Gradient at a 45-degree angle
-              // gradient: linearGradient(45, ['red', 'blue']),
+// gradient: linearGradient(45, ['red', 'blue']),
               /// Gradient that starts at 60% of the gradient line
-              // gradient: linearGradient(135, ['orange', 'orange 60%', 'cyan']),
+// gradient: linearGradient(135, ['orange', 'orange 60%', 'cyan']),
               /// Gradient with multi-position color stops
-              // gradient: linearGradient(
-              //   Alignment.centerRight,
-              //   [
-              //     'red 20%',
-              //     'orange 20% 40%',
-              //     'yellow 40% 60%',
-              //     'green 60% 80%',
-              //     'blue 80%',
-              //   ],
-              // ),
+// gradient: linearGradient(
+// Alignment.centerRight,
+// [
+// 'red 20%',
+// 'orange 20% 40%',
+// 'yellow 40% 60%',
+// 'green 60% 80%',
+// 'blue 80%',
+// ],
+// ),
             ),
           ),
         ),

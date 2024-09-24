@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../lib/src/css_like.dart';
+import 'package:gradient_like_css/src/css_like.dart';
 
 void main() {
   group('angleOrEndAlignment', () {
@@ -27,8 +27,6 @@ void main() {
     });
     test('Angle is int #2', () {
       const expected = LinearGradient(
-        begin: Alignment.centerLeft,
-        end: Alignment.centerRight,
         colors: [
           Color(0xffe66465),
           Color(0xff9198e5),
@@ -207,8 +205,6 @@ void main() {
     });
     test('Angle is negative number #4', () {
       const expected = LinearGradient(
-        begin: Alignment.centerLeft,
-        end: Alignment.centerRight,
         colors: [
           Color(0xffe66465),
           Color(0xff9198e5),
@@ -283,8 +279,10 @@ void main() {
       expect(actual, expected);
     });
     test('angleOrEndAlignment is Object', () {
-      expect(() => linearGradient(Object(), ['#e66465', '#9198e5']),
-          throwsFormatException);
+      expect(
+        () => linearGradient(Object(), ['#e66465', '#9198e5']),
+        throwsFormatException,
+      );
     });
   });
 
@@ -400,15 +398,21 @@ void main() {
       );
 
       final actual = linearGradient(
-          null, ['orange 20%', 'yellow', 'paleGreen', 'cyan 80%']);
+        null,
+        ['orange 20%', 'yellow', 'paleGreen', 'cyan 80%'],
+      );
 
       expect(actual, expected);
     });
     test('colorStopList has an invalid value', () {
-      expect(() => linearGradient(null, ['#e66465 20', '#9198e5']),
-          throwsFormatException);
-      expect(() => linearGradient(null, ['#e66465 A%', '#9198e5']),
-          throwsFormatException);
+      expect(
+        () => linearGradient(null, ['#e66465 20', '#9198e5']),
+        throwsFormatException,
+      );
+      expect(
+        () => linearGradient(null, ['#e66465 A%', '#9198e5']),
+        throwsFormatException,
+      );
     });
     test('colorStopList is null', () {
       expect(() => linearGradient(null, null), throwsFormatException);
